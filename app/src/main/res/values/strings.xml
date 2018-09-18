@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Twitter Searches</string>
+    <string name="queryPrompt">Enter Twitter search query here</string>
+</resources>
