@@ -24,7 +24,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <EditText
@@ -32,13 +32,45 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|fill_horizontal"
+            android:layout_weight="1"
+            android:hint="@string/tagPrompt"
+            android:imeOptions="actionNone"
             android:inputType="textPersonName" />
 
         <ImageButton
             android:id="@+id/saveButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/saveDescription"
             android:src="@android:drawable/ic_menu_save" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="fill"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/holo_blue_bright"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:text="@string/taggedSearches" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="fill"
+            android:layout_marginBottom="@dimen/tagged_searches_padding"
+            android:layout_marginTop="@dimen/tagged_searches_padding"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/activity_vertical_margin" />
+    </LinearLayout>
+
 </GridLayout>
